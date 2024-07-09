@@ -3,11 +3,23 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import {
+  createBrowserRouter,
+  RouterProvider,
+} from "react-router-dom";
+import { BrowserRouter as Router } from "react-router-dom";
+import Layout from './Layout';
+import Header from './components/header/header';
+import Footer from './components/footer/footer';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <Router>
+      <Header />
+      <Layout />
+      <Footer />
+    </Router>
   </React.StrictMode>
 );
 
