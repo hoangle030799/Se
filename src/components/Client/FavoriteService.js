@@ -1,5 +1,4 @@
-import { Button } from "../ui/button"
-import { Avatar, AvatarFallback, AvatarImage } from "../ui/avatar"
+
 import { Heart } from 'lucide-react';
 import ClientBtn from "./ClientBtn";
 import {
@@ -7,7 +6,6 @@ import {
     TableBody,
     TableCaption,
     TableCell,
-    TableFooter,
     TableHead,
     TableHeader,
     TableRow,
@@ -54,15 +52,9 @@ const FavoriteService = (props) => {
                                 </TableRow>
                             ))}
                         </TableBody>
-                        <TableFooter>
-                            <TableRow>
-                                <TableCell colSpan={3}>Total</TableCell>
-                                <TableCell className="text-right">$2,500.00</TableCell>
-                            </TableRow>
-                        </TableFooter>
                     </Table>
                     </div>
-                    <div className="favoriteService">
+                    <div className="favoriteService w-full m-5">
                     <Table className="w-11/12 ml-5 mr-10">
                         <TableCaption>List Favorite Service</TableCaption>
                         <TableHeader>

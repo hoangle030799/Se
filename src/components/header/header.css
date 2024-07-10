@@ -29,6 +29,14 @@
     margin-left: 95px;
     margin-top: 12px;
 }
+.ct-provider{
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    width: 80%;
+    height: 30vh;
+    margin-left: 95px;
+    margin-top: 12px;
+}
 .footer{
     background: #E4E4E4;
     height: 40px;
