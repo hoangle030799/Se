@@ -55,14 +55,16 @@ const SideBar = () => {
                                 Category And Service
                             </a>
                             <a
-                                href="#"
+                                // href="#"
+                                onClick={()=> navigate('/admin/ProviderRevenue')}
                                 className="flex items-center px-3 py-2 text-slate-500 hover:text-slate-700"
                             >
                                 <HandCoins   className="h-4 w-4" /> 
                                 Provider's Revenue
                             </a>
                             <a
-                                href="#"
+                                // href="#"
+                                onClick={()=> navigate('/admin/ProviderInvoice')}
                                 className="flex items-center px-3 py-2 text-slate-500 hover:text-slate-700"
                             >
                                 <Banknote   className="h-4 w-4" /> 

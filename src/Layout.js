@@ -19,6 +19,8 @@ import Dashboard from "./components/Admin/SideBar";
 import SheetDemo from "./components/Admin/SideBar";
 import AdReservation from "./components/Admin/AdReservation";
 import CategoryAndService from "./components/Admin/CategoryAndService";
+import ProviderRevenue from "./components/Admin/ProviderRevenue";
+import ProviderInvoice from "./components/Admin/ProviderInvoice";
 
 const Layout = () => {
     return (
@@ -45,8 +47,8 @@ const Layout = () => {
                 <Route path="/admin/ManageUser" element={<Main><ManageUser /></Main>} />
                 <Route path="/admin/Reservation" element={<Main><AdReservation /></Main>} />
                 <Route path="/admin/Category" element={<Main><CategoryAndService /></Main>} />
-                <Route path="/admin/Reservation" element={<Main><AdReservation /></Main>} />
-                <Route path="/admin/Reservation" element={<Main><AdReservation /></Main>} />
+                <Route path="/admin/ProviderRevenue" element={<Main><ProviderRevenue /></Main>} />
+                <Route path="/admin/ProviderInvoice" element={<Main><ProviderInvoice /></Main>} />
                 </>
             </Routes>
         </div>

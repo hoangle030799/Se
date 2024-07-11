@@ -16,9 +16,15 @@ import {
     TableRow,
 } from "../ui/table"
 import { Button } from "../ui/button"
-import { Input } from "../ui/input"
-import { ImagePlus } from 'lucide-react';
-import avt from '../../asset/image/111.jpg'
+import {
+    Select,
+    SelectContent,
+    SelectItem,
+    SelectTrigger,
+    SelectValue,
+  } from "../ui/select"
+  import { Textarea } from "../ui/textarea"
+
 
 const AdReservation = (props) => {
     const invoices = [
@@ -62,29 +68,32 @@ const AdReservation = (props) => {
             </div>
             <div className="content w-full h-full relative">
                 <div className="curren-content-1 absolute flex flex-col gap-5">
-                    <div className="createProvider">
+                <div className="createReservation">
                         <Accordion type="single" collapsible className="w-6/7 ml-5 mt-5 mr-10">
                             <AccordionItem value="item">
                                 <AccordionTrigger><h2>Add new Reservation</h2></AccordionTrigger>
                                 <AccordionContent className="flex gap-5 mt-3 mx-2">
-                                    <div className="flex flex-col gap-5 w-2/5">
-                                        <Input type="text" placeholder="Name" />
-                                        <Input type="text" placeholder="Phone" />
-                                        <Input type="text" placeholder="Service Category" />
+                                    <div className="flex flex-col gap-14">
+                                        <Select>
+                                            <SelectTrigger className="w-[180px]">
+                                                <SelectValue placeholder="Provider" />
+                                            </SelectTrigger>
+                                            <SelectContent>
+                                                <SelectItem value="light">Light</SelectItem>
+                                                <SelectItem value="dark">Dark</SelectItem>
+                                                <SelectItem value="system">System</SelectItem>
+                                            </SelectContent>
+                                        </Select>
                                         <Button className="w-fit h-fit px-6 py-1">+ Create</Button>
                                     </div>
-                                    <ImagePlus />
-                                    <div className="previewImage flex justify-center items-center w-1/2">
-                                        Preview Image
-                                        {/* <img className="max-w-full max-h-full" src={avt}/> */}
-                                    </div>
+                                    <Textarea placeholder="Description" />
                                 </AccordionContent>
                             </AccordionItem>
                         </Accordion>
                     </div>
-                    <div className="listProvider w-6/7 ml-5 mt-5 mr-10 ">
+                    <div className="list-reservation w-6/7 ml-5 mr-10 ">
                         <Table>
-                            <TableCaption>A List User</TableCaption>
+                            <TableCaption>A List Reservation</TableCaption>
                             <TableHeader>
                                 <TableRow>
                                     <TableHead className="w-[100px]">Invoice</TableHead>

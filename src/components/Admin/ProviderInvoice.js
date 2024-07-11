@@ -21,7 +21,7 @@ import { Input } from "../ui/input"
 import { ImagePlus } from 'lucide-react';
 import avt from '../../asset/image/111.jpg'
 
-const CategoryAndService = (props) => {
+const ProviderInvoice = (props) => {
     const invoices = [
         {
             invoice: "INV001",
@@ -63,28 +63,33 @@ const CategoryAndService = (props) => {
             </div>
             <div className="content w-full h-full relative">
                 <div className="curren-content-1 absolute flex flex-col gap-5">
-                    <div className="createCategory w-4/5 mx-auto mt-3">
-                        <span className="text-xl font-medium ml-5"> Category Information</span>
-                        <div className="flex  mt-3 mx-7 justify-between">
-                            <div className="flex w-full max-w-sm items-center space-x-2">
-                                <Input type="category" placeholder="Category" />
-                                <Button type="submit">Add</Button>
+                    <div className="selectProvider w-4/5 mx-auto mt-3 flex items-center px-3 gap-14">
+                        <Select className="">
+                            <SelectTrigger className="w-[45%]">
+                                <SelectValue placeholder="Provider" />
+                            </SelectTrigger>
+                            <SelectContent>
+                                <SelectItem value="light">Light</SelectItem>
+                                <SelectItem value="dark">Dark</SelectItem>
+                                <SelectItem value="system">System</SelectItem>
+                            </SelectContent>
+                        </Select>
+                        <div className="flex gap-5">
+                            <Avatar>
+                                <AvatarImage
+                                    src="https://github.com/shadcn.png" />
+                                <AvatarFallback>Avatar</AvatarFallback>
+                            </Avatar>
+                            <div className="title-1-left flex flex-col mt-5 ">
+                                <span className="text-3xl font-medium">USER NAME</span>
+                                <span className="text-xl">Phone</span>
+                                <span className="text-xl">Category Service</span>
                             </div>
-                            <Select className="">
-                                <SelectTrigger className="w-[350px]">
-                                    <SelectValue placeholder="Category" />
-                                </SelectTrigger>
-                                <SelectContent>
-                                    <SelectItem value="light">Light</SelectItem>
-                                    <SelectItem value="dark">Dark</SelectItem>
-                                    <SelectItem value="system">System</SelectItem>
-                                </SelectContent>
-                            </Select>
                         </div>
                     </div>
-                    <div className="listProvider w-6/7 ml-5 mt-5 mr-10 ">
+                    <div className="listProvider w-6/7 ml-5 mr-10 ">
                         <Table>
-                            <TableCaption>A List User</TableCaption>
+                            <TableCaption>A Invoice</TableCaption>
                             <TableHeader>
                                 <TableRow>
                                     <TableHead className="w-[100px]">Invoice</TableHead>
@@ -110,4 +115,4 @@ const CategoryAndService = (props) => {
         </div>
     )
 }
-export default CategoryAndService
+export default ProviderInvoice

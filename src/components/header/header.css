@@ -30,6 +30,16 @@
     height: 70vh;
     background: white;
 }
+.createCategory {
+    border-radius: 10px;
+    background: #F8F5F5;
+    height: 13vh;
+}
+.selectProvider{
+    border-radius: 10px;
+    background: #F8F5F5;
+    height: 23vh;
+}
 .ct {
     border: 1px solid #ccc;
     border-radius: 10px;
