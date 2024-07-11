@@ -21,6 +21,15 @@
     height: 78vh;
     background: white;
 }
+.curren-content-1{
+    border-radius: 10px;
+    border: none;
+    left: 20px;
+    top: 70px;
+    width: 99%;
+    height: 70vh;
+    background: white;
+}
 .ct {
     border: 1px solid #ccc;
     border-radius: 10px;
@@ -36,6 +45,12 @@
     height: 30vh;
     margin-left: 95px;
     margin-top: 12px;
+}
+.previewImage {
+    border: 1px dashed #ccc;
+    border-radius: 10px;
+    color: #ccc;
+    height: 22vh;
 }
 .footer{
     background: #E4E4E4;

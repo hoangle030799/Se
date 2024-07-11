@@ -14,6 +14,11 @@ import Reservation from "./components/Provider/Reservation";
 import Invoice from "./components/Provider/Invoice";
 import Promotions from "./components/Provider/Promation";
 import PrNotification from "./components/Provider/PrNotification";
+import ManageUser from "./components/Admin/ManageUser";
+import Dashboard from "./components/Admin/SideBar";
+import SheetDemo from "./components/Admin/SideBar";
+import AdReservation from "./components/Admin/AdReservation";
+import CategoryAndService from "./components/Admin/CategoryAndService";
 
 const Layout = () => {
     return (
@@ -35,6 +40,13 @@ const Layout = () => {
                     <Route path="/provider/Invoice" element={<Main><Invoice /></Main>} />
                     <Route path="/provider/Promotions" element={<Main><Promotions /></Main>} />
                     <Route path="/provider/Notification" element={<Main><PrNotification /></Main>} />
+                </>
+                <>
+                <Route path="/admin/ManageUser" element={<Main><ManageUser /></Main>} />
+                <Route path="/admin/Reservation" element={<Main><AdReservation /></Main>} />
+                <Route path="/admin/Category" element={<Main><CategoryAndService /></Main>} />
+                <Route path="/admin/Reservation" element={<Main><AdReservation /></Main>} />
+                <Route path="/admin/Reservation" element={<Main><AdReservation /></Main>} />
                 </>
             </Routes>
         </div>
